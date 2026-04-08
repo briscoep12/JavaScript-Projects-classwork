@@ -65,11 +65,22 @@ public static void ZodiacDictionary(String[] args) {
 
             }
 
-            case "Cancer" ->{
+            case "Cancer" ->{JOptionPane.showMessageDialog(null, """
+                                                               Element: Water
+                                                               Modality: Cardinal
+                                                               Notable Traits:initiator of emotion, action oriented, active caretaker,
+                                                               Symbol: Crab
+                                                               Well known for being deeply emotional, highly intuitive, and nuturing nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
 
             }
               
-            case "Leo" ->{
+            case "Leo" ->{JOptionPane.showMessageDialog(null, """
+                                                               Element: Fire
+                                                               Modality: Fixed
+                                                               Notable Traits:
+                                                               Symbol: Lion
+                                                        .""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                              
 
             }
             case "Virgo" ->{

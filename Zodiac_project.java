@@ -1,4 +1,6 @@
+import java.awt.Component;
 import java.util.*;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
@@ -15,14 +17,12 @@ public class Zodiac_project {
 
        int choice = JOptionPane.showOptionDialog(null,"Welcome to the Zodiac \n-Find your sign \n-Learn about signs \n-Test your compatibility \n","The Zodiac", JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, options[0]);
 
-        switch (choice) {
-            case 0 :
-                Zodiac_Finder(args);
+    switch (choice) {
+            case 0 -> Zodiac_Finder(args);
        
-            case 1 :
-                ZodiacDictionary(args);
-            case 2 :
-                break;
+            case 1 -> ZodiacDictionary(args);
+            case 2 -> {
+            }
                 
         }
    }//end of method
@@ -254,20 +254,88 @@ if(option == JOptionPane.CANCEL_OPTION){
             Zodiac_Finder(args);
         }}
 
-        case 12 ->{
-        if(Day < 22 && Day > 0){
-            JOptionPane.showMessageDialog(null,"You're a Sagittarius.");
-            Zodiac_Finder(args);
+                case 12 ->{
+                if(Day < 22 && Day > 0){
+                    JOptionPane.showMessageDialog(null,"You're a Sagittarius.");
+                    Zodiac_Finder(args);
+                }
+                else if(Day >=22 && Day <=31){
+                    JOptionPane.showMessageDialog(null,"You're a Capricorn.");
+                    Zodiac_Finder(args);
+                }
+                }
+                }
         }
-        else if(Day >=22 && Day <=31){
-            JOptionPane.showMessageDialog(null,"You're a Capricorn.");
-            Zodiac_Finder(args);
-        }
-        }
-        }
+        
+        public static void CompatibilityTest(String[] args) {
+      String[] options = new String[]{"Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"};
+      JComboBox<String> Sign1 = new JComboBox(options);
+      JComboBox<String> Sign2 = new JComboBox(options);
+      Object[] window = new Object[]{"Enter your zodiac sign", Sign1, "Enter your partner's zodiac sign", Sign2};
+      int option = JOptionPane.showConfirmDialog((Component)null, window, "See how compatible you are with your partner!", 2);
+      if (option == 2) {
+         DialogBox(args);
+      }
+
+      String sign1 = (String) Sign1.getSelectedItem();
+      String sign2 = (String) Sign2.getSelectedItem();
+      
+      switch (sign1) {
+          case "Aries" -> {
+          switch (sign2) {
+              case "Leo", "Sagittarius", "Gemini", "Aquarius" -> {
+                  JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                  CompatibilityTest(args);
+              }
+              case "Aries", "Libra", "Cancer", "Capricorn" -> {
+                  JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                  CompatibilityTest(args);
+              }
+              default -> {
+                  JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                  CompatibilityTest(args);
+              }
+          }//inner switch end
+          }//case end
+          case "Taurus" -> {
+              switch (sign2) {
+                  case "Virgo", "Capricorn", "Cancer", "Pisces" -> {
+                      JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                      CompatibilityTest(args);
+                  }
+                  case "Taurus", "Scorpio", "Leo", "Aquarius" -> {
+                      JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                      CompatibilityTest(args);
+                  }
+                  default -> {
+                      JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                      CompatibilityTest(args);
+                  }
+              }//inner switch end
+          }//case end
+          case "Gemini" -> {
+              switch (sign2) {
+                  case "Libra", "Aquarius", "Aries", "Leo" -> {
+                      JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                      CompatibilityTest(args);
+                  }
+                  case "Gemini", "Sagittarius", "Virgo", "Capricorn" -> {
+                      JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                      CompatibilityTest(args);
+                  }
+                  default -> {
+                      JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                      CompatibilityTest(args);
+                  }
+              }//inner switch end
+          }//case end
+          default -> throw new AssertionError();
+      }//main switch end
+
+
     
 
-    }
+    }//method end
 
 
             
@@ -278,4 +346,4 @@ if(option == JOptionPane.CANCEL_OPTION){
     
 
 
-}
+}//class end

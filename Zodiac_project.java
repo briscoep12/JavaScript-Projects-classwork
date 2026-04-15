@@ -83,29 +83,76 @@ public static void ZodiacDictionary(String[] args) {
                                                               
 
             }
-            case "Virgo" ->{
+            case "Virgo" -> {
+        JOptionPane.showMessageDialog(null, """
+            Element: Earth
+            Modality: Mutable
+            Notable Traits: Analytical, Practical, Detail-Oriented, Organized
+            Symbol: The Maiden
+            Virgo focuses on precision, improvement, and helping others.
+            """, "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE);
+    }
 
-            }
-            case "Libra" ->{
+    case "Libra" -> {
+        JOptionPane.showMessageDialog(null, """
+            Element: Air
+            Modality: Cardinal
+            Notable Traits: Balanced, Diplomatic, Charming, Fair
+            Symbol: The Scales
+            Libra seeks harmony and justice in relationships and environments.
+            """, "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE);
+    }
 
-            }
-            case "Scorpio" ->{
+    case "Scorpio" -> {
+        JOptionPane.showMessageDialog(null, """
+            Element: Water
+            Modality: Fixed
+            Notable Traits: Intense, Passionate, Mysterious, Loyal
+            Symbol: The Scorpion
+            Scorpio is known for deep emotions and strong determination.
+            """, "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE);
+    }
 
-            }
-            case "Sagittarius" ->{
+    case "Sagittarius" -> {
+        JOptionPane.showMessageDialog(null, """
+            Element: Fire
+            Modality: Mutable
+            Notable Traits: Adventurous, Honest, Optimistic, Independent
+            Symbol: The Archer
+            Sagittarius loves freedom, travel, and exploring new ideas.
+            """, "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE);
+    }
 
-            }
-            case "Capricorn" ->{
+    case "Capricorn" -> {
+        JOptionPane.showMessageDialog(null, """
+            Element: Earth
+            Modality: Cardinal
+            Notable Traits: Disciplined, Responsible, Ambitious, Patient
+            Symbol: The Goat
+            Capricorn is focused on goals, structure, and long-term success.
+            """, "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE);
+    }
 
-            }
-            case "Aquarius" ->{
+    case "Aquarius" -> {
+        JOptionPane.showMessageDialog(null, """
+            Element: Air
+            Modality: Fixed
+            Notable Traits: Innovative, Independent, Humanitarian, Unique
+            Symbol: The Water Bearer
+            Aquarius is forward-thinking and values individuality and change.
+            """, "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE);
+    }
 
-            }
-            case "Pisces" ->{
+    case "Pisces" -> {
+        JOptionPane.showMessageDialog(null, """
+            Element: Water
+            Modality: Mutable
+            Notable Traits: Compassionate, Artistic, Intuitive, Gentle
+            Symbol: The Fish
+            Pisces is deeply imaginative and emotionally connected to others.
+            """, "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE);
+    }
 
-            }
-
-        
         }//switch end
     
 }//method end

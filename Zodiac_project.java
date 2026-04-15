@@ -1,5 +1,4 @@
 import java.awt.Image;
-import java.util.*;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
@@ -7,9 +6,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 public class Zodiac_project {
-    static Scanner sc = new Scanner(System.in);
+    
     static final ImageIcon customIcon = new ImageIcon("C:\\Users\\ender\\Downloads\\Zodiac symbol.png");
     static Image scaledImage = customIcon.getImage().getScaledInstance(30, 30, java.awt.Image.SCALE_SMOOTH);
+    static Icon scaledIcon = new ImageIcon(scaledImage);
     
     public static void main(String[] args) {
         DialogBox(args);
@@ -22,8 +22,12 @@ public class Zodiac_project {
         "Welcome to the Zodiac \n-Find your sign \n-Learn about signs \n-Test your compatibility \n",
         "The Zodiac", 
         JOptionPane.DEFAULT_OPTION, 
-        JOptionPane.PLAIN_MESSAGE, (Icon) scaledImage, 
+        JOptionPane.PLAIN_MESSAGE, (Icon) scaledIcon, 
         options, options[0]);
+
+        if(choice == -1){
+            System.exit(0);
+        }
 
     switch (choice) {
             case 0 -> Zodiac_Finder(args);
@@ -38,12 +42,13 @@ public static void ZodiacDictionary(String[] args) {
     String[] options ={"Aries","Taurus","Gemini","Cancer","Leo","Virgo","Libra","Scorpio","Sagittarius","Capricorn","Aquarius","Pisces"};
     Object select = JOptionPane.showInputDialog(null,
         "<html><div style='width: 200px;'>" + "The 12 zodiac signs are divided into four elements (Fire, Earth, Air, Water) and three modalities (Cardinal, Fixed, Mutable), reflecting distinct personality traits based on birth date. They represent a 360-degree circle of life, starting with Aries (March) and ending with Pisces (February), used to analyze personality, compatibility, and life cycles." + "</div></html>",
-        "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE, customIcon, options, options[0]);
+        "Learn about Zodiac signs", JOptionPane.INFORMATION_MESSAGE, (Icon) scaledIcon, options, options[0]);
 
         if(select == null){
         DialogBox(args);
         return;
-}
+    }
+
 
 
 
@@ -173,7 +178,7 @@ Object[] window ={
     "Enter your birth day", DayField,
 };
 
-int option = JOptionPane.showConfirmDialog(null, window, "Find your Zodiac sign", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, customIcon);
+int option = JOptionPane.showConfirmDialog(null, window, "Find your Zodiac sign", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, (Icon) scaledIcon);
 
 if(option == JOptionPane.CANCEL_OPTION){
     DialogBox(args);
@@ -188,6 +193,7 @@ if(option == JOptionPane.CANCEL_OPTION){
     int Month, Day;
     Month = Integer.parseInt(MonthF);
     Day = Integer.parseInt(DayF);
+
 
     switch(Month){
         //selecting signs logic
@@ -307,32 +313,41 @@ if(option == JOptionPane.CANCEL_OPTION){
             Zodiac_Finder(args);
         }}
 
-                case 12 ->{
-                if(Day < 22 && Day > 0){
+        case 12 ->{
+        if(Day < 22 && Day > 0){
                     JOptionPane.showMessageDialog(null,"You're a Sagittarius.");
                     Zodiac_Finder(args);
-                }
-                else if(Day >=22 && Day <=31){
+             }
+        else if(Day >=22 && Day <=31){
                     JOptionPane.showMessageDialog(null,"You're a Capricorn.");
                     Zodiac_Finder(args);
                 }
+            else{
+                JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+                Zodiac_Finder(args);}
+
                 }
+        default -> {
+            JOptionPane.showMessageDialog(null,"Invalid month. Please enter a number between 1 and 12.");
+            Zodiac_Finder(args);
                 }
+            }
         }
         
 
-        public static void CompatibilityTest(String[] args) {
+    public static void CompatibilityTest(String[] args) {
             //Dialog box
       String[] options = new String[]{"Aries", "Taurus", "Gemini", "Cancer", "Leo", "Virgo", "Libra", "Scorpio", "Sagittarius", "Capricorn", "Aquarius", "Pisces"};
-      JComboBox<String> Sign1 = new JComboBox(options);
-      JComboBox<String> Sign2 = new JComboBox(options);
+      JComboBox<String> Sign1 = new JComboBox<>(options);
+      JComboBox<String> Sign2 = new JComboBox<>(options);
       Object[] window = new Object[]{"Enter your zodiac sign", Sign1, "Enter your partner's zodiac sign", Sign2};
-      int option = JOptionPane.showConfirmDialog(null, window, "See how compatible you are with your partner!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, customIcon);
+      int option = JOptionPane.showConfirmDialog(null, window, "See how compatible you are with your partner!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.INFORMATION_MESSAGE, (Icon) scaledIcon);
 
       //Return to main menu
-      if (option == 2) {
+      if (option == 2 || option == -1) {
          DialogBox(args);
       }
+
       //inputs
       String sign1 = (String) Sign1.getSelectedItem();
       String sign2 = (String) Sign2.getSelectedItem();
@@ -531,21 +546,15 @@ if(option == JOptionPane.CANCEL_OPTION){
                   }
               }//inner switch end
           }//case end
-          }
-      }//main switch end
+
+          }//main switch end
 
 
     
 
-    }//method end
+    //method end
 
-    public static Image getScaledImage() {
-        return scaledImage;
-    }
 
-    public static void setScaledImage(Image scaledImage) {
-        Zodiac_project.scaledImage = scaledImage;
-    }
 
 
             
@@ -556,4 +565,5 @@ if(option == JOptionPane.CANCEL_OPTION){
     
 
 
+}
 }//class end

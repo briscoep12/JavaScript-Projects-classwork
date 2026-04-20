@@ -8,7 +8,7 @@ import javax.swing.JTextField;
 public class Zodiac_project {
     
     static final ImageIcon customIcon = new ImageIcon("C:\\Users\\ender\\Downloads\\Zodiac symbol.png");
-    static Image scaledImage = customIcon.getImage().getScaledInstance(30, 30, java.awt.Image.SCALE_SMOOTH);
+    static Image scaledImage = customIcon.getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH);
     static Icon scaledIcon = new ImageIcon(scaledImage);
     
     public static void main(String[] args) {
@@ -48,22 +48,19 @@ public static void ZodiacDictionary(String[] args) {
         DialogBox(args);
         return;
     }
-
-
-
-
         String selection = (String) select;
-
+    //Switch for information about signs
         switch (selection) {
             case "Aries" -> {JOptionPane.showMessageDialog(null, """
                                                                Element: Fire 
                                                                Modality: Cardinal 
                                                                Notable Traits: Courageous, Optimistic, Honest, Independent, Aggressive 
                                                                Symbol: The Ram 
-                                                               Known as the first sign of the zodiac, it represents the spark of life and new beginnings. Fueled by passion and energy, they have drive to take risks, though it can also lead to a short temper or impulsive burnout.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known as the first sign of the zodiac, it represents the spark of life and new beginnings. \nFueled by passion and energy, they have drive to take risks, though it can also lead to a short temper or impulsive burnout.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
                                                                ZodiacDictionary(args);
 
             }
+
             case "Taurus" ->{JOptionPane.showMessageDialog(null, """
                                                                Element: Earth 
                                                                Modality: Fixed
@@ -72,12 +69,14 @@ public static void ZodiacDictionary(String[] args) {
                                                                Often called the builder, it represents the stage of life where we seek to ground ourselves and find security in the physical world.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
 
             }
+
             case "Gemini" ->{JOptionPane.showMessageDialog(null, """
                                                                Element: Air 
                                                                Modality: Mutable
                                                                Notable Traits:Witty, curious, versatile, very emotional
                                                                Symbol: The Twins
                                                                Referred to as the messenger, Gemini reflects a rapid mental duality.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               ZodiacDictionary(args);
 
             }
 
@@ -87,9 +86,9 @@ public static void ZodiacDictionary(String[] args) {
                                                                Notable Traits:initiator of emotion, action oriented, active caretaker,
                                                                Symbol: Crab
                                                                Well known for being deeply emotional, highly intuitive, and nuturing nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               ZodiacDictionary(args);
 
-            }
-              
+            } 
             case "Leo" ->{JOptionPane.showMessageDialog(null, """
                                                                Element: Fire
                                                                Modality: Fixed
@@ -160,12 +159,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Symbol: The Fish
                                                                Known for their empathy and imaginative nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
                                                                ZodiacDictionary(args);
-
             }
-
-        
         }//switch end
-    
 }//method end
 
 public static void Zodiac_Finder(String[] args) {

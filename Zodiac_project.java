@@ -10,6 +10,18 @@ public class Zodiac_project {
     static final ImageIcon customIcon = new ImageIcon("C:\\Users\\ender\\Downloads\\Zodiac symbol.png");
     static Image scaledImage = customIcon.getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH);
     static Icon scaledIcon = new ImageIcon(scaledImage);
+    static ImageIcon SagImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\download.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon AquImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Aquarius.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon CapImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Capricorn.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon PisImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Pisces.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon AriImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Aries.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon TauImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Taurus.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon GemImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Gemini.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon CanImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Cancer.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon LeoImage =new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Leo.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon VirImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Virgo.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon LibImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Libra.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));
+    static ImageIcon ScoImage = new ImageIcon(new ImageIcon("C:\\Users\\ender\\Downloads\\Scorpio.png").getImage().getScaledInstance(70, 70, java.awt.Image.SCALE_SMOOTH));    
     
     public static void main(String[] args) {
         DialogBox(args);
@@ -26,7 +38,8 @@ public class Zodiac_project {
         options, options[0]);
 
         if(choice == -1){
-            System.exit(0);
+            System.out.println("You exited the program.");
+            System.exit(0); 
         }
 
     switch (choice) {
@@ -51,13 +64,16 @@ public static void ZodiacDictionary(String[] args) {
         String selection = (String) select;
     //Switch for information about signs
         switch (selection) {
-            case "Aries" -> {JOptionPane.showMessageDialog(null, """
+            case "Aries" -> {
+                JOptionPane.showMessageDialog(null, """
                                                                Element: Fire 
                                                                Modality: Cardinal 
                                                                Notable Traits: Courageous, Optimistic, Honest, Independent, Aggressive 
                                                                Symbol: The Ram 
-                                                               Known as the first sign of the zodiac, it represents the spark of life and new beginnings. \nFueled by passion and energy, they have drive to take risks, though it can also lead to a short temper or impulsive burnout.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known as the first sign of the zodiac, it represents the spark of life and new beginnings. \nFueled by passion and energy, they have drive to take risks, though it can also lead to a short temper or impulsive burnout.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) AriImage);
+                                                               System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
+
 
             }
 
@@ -66,8 +82,9 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Fixed
                                                                Notable Traits: Dependable, patient, artistic, hard-working
                                                                Symbol: The Bull
-                                                               Often called the builder, it represents the stage of life where we seek to ground ourselves and find security in the physical world.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
-
+                                                               Often called the builder, it represents the stage of life where we seek to ground ourselves and find security in the physical world.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon)TauImage);
+                                                                System.out.println("You looked up information: " + selection);
+                ZodiacDictionary(args);
             }
 
             case "Gemini" ->{JOptionPane.showMessageDialog(null, """
@@ -75,8 +92,10 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Mutable
                                                                Notable Traits:Witty, curious, versatile, very emotional
                                                                Symbol: The Twins
-                                                               Referred to as the messenger, Gemini reflects a rapid mental duality.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Referred to as the messenger, Gemini reflects a rapid mental duality.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) GemImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
+
 
             }
 
@@ -85,7 +104,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Cardinal
                                                                Notable Traits:initiator of emotion, action oriented, active caretaker,
                                                                Symbol: Crab
-                                                               Well known for being deeply emotional, highly intuitive, and nuturing nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Well known for being deeply emotional, highly intuitive, and nuturing nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) CanImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
 
             } 
@@ -94,7 +114,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Fixed
                                                                Notable Traits: Confident, generous, creative, dramatic
                                                                Symbol: Lion
-                                                               Known for their bold leadership and charismatic nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known for their bold leadership and charismatic nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) LeoImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
 
             }
@@ -103,7 +124,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Mutable
                                                                Notable Traits: Analytical, practical, reliable, detail-oriented
                                                                Symbol: The Maiden
-                                                               Known for their methodical approach and focus on perfection.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known for their methodical approach and focus on perfection.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) VirImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
 
             }
@@ -112,7 +134,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Cardinal
                                                                Notable Traits: Diplomatic, fair-minded, balanced, social
                                                                Symbol: The Scales
-                                                               Known for their quest for harmony and justice.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known for their quest for harmony and justice.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) LibImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
 
             }
@@ -121,7 +144,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Fixed
                                                                Notable Traits: Passionate, secretive, determined, powerful
                                                                Symbol: The Scorpion
-                                                               Known for their intense emotions and magnetic personality.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known for their intense emotions and magnetic personality.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) ScoImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
 
             }
@@ -130,7 +154,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Mutable
                                                                Notable Traits: Optimistic, adventurous, honest, philosophical
                                                                Symbol: The Archer
-                                                               Known for their love of freedom and exploration.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known for their love of freedom and exploration.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) SagImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
 
             }
@@ -139,7 +164,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Cardinal
                                                                Notable Traits: Ambitious, disciplined, responsible, self-control
                                                                Symbol: The Goat
-                                                               Known for their determination and practical wisdom.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known for their determination and practical wisdom.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) CapImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
 
             }
@@ -148,7 +174,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Fixed
                                                                Notable Traits: Independent, humanitarian, intellectual, eccentric
                                                                Symbol: The Water Bearer
-                                                               Known for their innovative thinking and progressive vision.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known for their innovative thinking and progressive vision.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) AquImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
 
             }
@@ -157,7 +184,8 @@ public static void ZodiacDictionary(String[] args) {
                                                                Modality: Mutable
                                                                Notable Traits: Compassionate, artistic, sensitive, intuitive
                                                                Symbol: The Fish
-                                                               Known for their empathy and imaginative nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE);
+                                                               Known for their empathy and imaginative nature.""","Learn about Zodiac signs",JOptionPane.INFORMATION_MESSAGE, (Icon) PisImage);
+                                                                System.out.println("You looked up information: " + selection);
                                                                ZodiacDictionary(args);
             }
         }//switch end
@@ -195,138 +223,205 @@ if(option == JOptionPane.CANCEL_OPTION){
         case 1 -> {       
         if(Day < 20 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Capricorn.");
+            System.out.println("You found the zodiac sign: Capricorn");
             Zodiac_Finder(args);
         
         }
         else if(Day >=20 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Aquarius.");
+            System.out.println("You found the zodiac sign: Aquarius");
             Zodiac_Finder(args);
         
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
+        }
         }
 
-        case 2 ->{
+        case 2 -> {
         if(Day < 20 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Aquarius.");
+            System.out.println("You found the zodiac sign: Aquarius");
             Zodiac_Finder(args);
         
         }
         else if(Day >=19 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Pisces.");
+            System.out.println("You found the zodiac sign: Pisces");
             Zodiac_Finder(args);
         
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
 
         case 3 ->{
         if(Day < 21 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Pisces.");
+            System.out.println("You found the zodiac sign: Pisces");
             Zodiac_Finder(args);
         }
         else if(Day >=21 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Aries.");
+            System.out.println("You found the zodiac sign: Aries");
             Zodiac_Finder(args);
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
         case 4 ->{
                     if(Day < 20 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Aries.");
+            System.out.println("You found the zodiac sign: Aries");
             Zodiac_Finder(args);
         }
         else if(Day >=20 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Taurus.");
+            System.out.println("You found the zodiac sign: Taurus");
             Zodiac_Finder(args);
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
         case 5 ->{
         if(Day < 20 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Taurus.");
+            System.out.println("You found the zodiac sign: Taurus");
             Zodiac_Finder(args);
         }
         else if(Day >=21 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Gemini.");
+            System.out.println("You found the zodiac sign: Gemini");
             Zodiac_Finder(args);
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
         case 6 ->{
         if(Day < 21 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Gemini.");
+            System.out.println("You found the zodiac sign: Gemini");
             Zodiac_Finder(args);
         }
         else if(Day >=21 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Cancer.");
+            System.out.println("You found the zodiac sign: Cancer");
             Zodiac_Finder(args);
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
         case 7 ->{
         if(Day < 23 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Cancer.");
+            System.out.println("You found the zodiac sign: Cancer");
             Zodiac_Finder(args);
         }
         else if(Day >=23 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Leo.");
+            System.out.println("You found the zodiac sign: Leo");
             Zodiac_Finder(args);
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
         case 8 ->{
         if(Day < 20 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Leo.");
+            System.out.println("You found the zodiac sign: Leo");
             Zodiac_Finder(args);
         }
         else if(Day >=20 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Virgo.");
+            System.out.println("You found the zodiac sign: Virgo");
             Zodiac_Finder(args);
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
         case 9 ->{
         if(Day < 20 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Virgo.");
+            System.out.println("You found the zodiac sign: Virgo");
             Zodiac_Finder(args);
         }
         else if(Day >=20 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Libra.");
+            System.out.println("You found the zodiac sign: Libra");
             Zodiac_Finder(args);
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
         case 10 ->{
             if(Day < 24 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Libra.");
+            System.out.println("You found the zodiac sign: Libra");
             Zodiac_Finder(args);
         }
         else if(Day >=24 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Scorpio.");
+            System.out.println("You found the zodiac sign: Scorpio");
             Zodiac_Finder(args);
         }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
         }
+    }
         case 11 ->{
         if(Day < 21 && Day > 0){
             JOptionPane.showMessageDialog(null,"You're a Scorpio.");
+            System.out.println("You found the zodiac sign: Scorpio");
             Zodiac_Finder(args);
         }
         else if(Day >=21 && Day <=31){
             JOptionPane.showMessageDialog(null,"You're a Sagittarius.");
+            System.out.println("You found the zodiac sign: Sagittarius");
             Zodiac_Finder(args);
-        }}
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
+            Zodiac_Finder(args);
+        }
+    }
 
         case 12 ->{
         if(Day < 22 && Day > 0){
                     JOptionPane.showMessageDialog(null,"You're a Sagittarius.");
+                    System.out.println("You found the zodiac sign: Sagittarius");
                     Zodiac_Finder(args);
              }
         else if(Day >=22 && Day <=31){
                     JOptionPane.showMessageDialog(null,"You're a Capricorn.");
+                    System.out.println("You found the zodiac sign: Capricorn");
                     Zodiac_Finder(args);
                 }
             else{
                 JOptionPane.showMessageDialog(null,"Invalid day. Please enter a number between 1 and 31.","Error", JOptionPane.ERROR_MESSAGE);
-                Zodiac_Finder(args);}
+                Zodiac_Finder(args);
+            }
 
                 }
-        default -> {
-            JOptionPane.showMessageDialog(null,"Invalid month. Please enter a number between 1 and 12.");
-            Zodiac_Finder(args);
-                }
-            }
+      
+            }//switch end
         }
         
 
@@ -353,14 +448,17 @@ if(option == JOptionPane.CANCEL_OPTION){
           switch (sign2) {
               case "Leo", "Sagittarius", "Gemini", "Aquarius" -> {
                   JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                  System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                   CompatibilityTest(args);
               }
               case "Aries", "Libra", "Cancer", "Capricorn" -> {
                   JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                    System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                   CompatibilityTest(args);
               }
               default -> {
                   JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                    System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                   CompatibilityTest(args);
               }
           }//inner switch end
@@ -369,14 +467,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Virgo", "Capricorn", "Cancer", "Pisces" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Taurus", "Scorpio", "Leo", "Aquarius" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -385,14 +486,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Libra", "Aquarius", "Aries", "Leo" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Gemini", "Sagittarius", "Virgo", "Capricorn" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -401,14 +505,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Taurus", "Virgo", "Pisces", "Scorpio" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Cancer", "Leo", "Libra", "Aquarius" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -417,14 +524,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Aries", "Sagittarius", "Gemini", "Libra" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Leo", "Virgo", "Scorpio", "Pisces" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -433,14 +543,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Taurus", "Capricorn", "Cancer", "Scorpio" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Virgo", "Aquarius", "Gemini", "Pisces" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -449,14 +562,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Gemini", "Aquarius", "Leo", "Sagittarius" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Libra", "Scorpio", "Aries", "Cancer" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -465,14 +581,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Cancer", "Pisces", "Taurus", "Capricorn" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Scorpio", "Gemini", "Leo", "Aquarius" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -481,14 +600,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Aries", "Leo", "Libra", "Aquarius" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Sagittarius", "Virgo", "Gemini", "Pisces" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -497,14 +619,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Taurus", "Virgo", "Scorpio", "Pisces" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Capricorn", "Libra", "Cancer", "Aries" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -513,14 +638,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Gemini", "Libra", "Aries", "Sagittarius" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Aquarius", "Taurus", "Leo", "Scorpio" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -529,14 +657,17 @@ if(option == JOptionPane.CANCEL_OPTION){
               switch (sign2) {
                   case "Cancer", "Scorpio", "Taurus", "Capricorn" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are very compatible!");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   case "Pisces", "Aries", "Libra", "Gemini" -> {
                       JOptionPane.showMessageDialog(null,"Your signs are somewhat compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
                   default -> {
                       JOptionPane.showMessageDialog(null,"Your signs are not compatible.");
+                        System.out.println("You tested compatibility: " + sign1 + " and " + sign2);
                       CompatibilityTest(args);
                   }
               }//inner switch end
@@ -561,4 +692,8 @@ if(option == JOptionPane.CANCEL_OPTION){
 
 
 }
+
+    public static void setTauImage(Image TauImage) {
+        Zodiac_project.TauImage = TauImage;
+    }
 }//class end
